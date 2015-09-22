@@ -1,6 +1,8 @@
 package appexperiments.base;
 
+import com.facebook.stetho.Stetho;
 import com.squareup.leakcanary.LeakCanary;
+import com.y29.appexperiments.base.BaseApp;
 
 import me.drakeet.library.CrashWoodpecker;
 
@@ -14,5 +16,6 @@ public class ExperimentsIntDebugApp extends BaseApp {
         super.onCreate();
         CrashWoodpecker.fly().to(this);
         LeakCanary.install(this);
+        Stetho.newInitializerBuilder(this);
     }
 }
