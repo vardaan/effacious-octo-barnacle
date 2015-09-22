@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
 
 // Manifest version information!
 def versionMajor = 1
@@ -61,4 +62,26 @@ dependencies {
     internalDebugCompile 'me.drakeet.library:crashwoodpecker:0.9.7'
     internalDebugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
     internalDebugCompile 'com.facebook.stetho:stetho:1.2.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    //remote connections
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta1'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta1'
+
+    // for doing cool stuff
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.2.0'
+
+    //for image loading
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    //for debugging
+    compile 'com.jakewharton.timber:timber:2.5.0'
+
+    //for dependency injections
+    compile 'com.google.dagger:dagger:2.0'
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
 }
