@@ -1,4 +1,4 @@
-package com.y29.appexperiments.base;
+package com.y29.appexperiments.ui.base;
 
 /**
  * Created by krishan on 17/9/15.
