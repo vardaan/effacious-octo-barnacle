@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.y29.appexperiments.di.component.AppComponent;
 import com.y29.appexperiments.ui.view.BaseView;
 
 import butterknife.ButterKnife;
@@ -32,4 +33,9 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     }
 
     public abstract int getLayout();
+
+    public AppComponent getAppComponent() {
+        return BaseApp.get(this).getAppComponent();
+    }
+
 }
